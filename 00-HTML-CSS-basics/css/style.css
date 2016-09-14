@@ -1,0 +1,24 @@
+* {
+   
+   font-size: 14px;
+   font-family: "Times New Roman";
+}
+
+aside {
+    background-color: Green;
+}
+
+footer {
+    background-color: Red;
+    text-align: center;
+}
+
+header {
+    background-color: Blue;
+    text-align: center;
+}
+
+nav {
+    background-color: Green;
+}
+
