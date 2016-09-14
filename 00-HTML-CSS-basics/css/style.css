@@ -1,6 +1,6 @@
 * {
    
-   font-size: 14px;
+   font-size: 14px ;
    font-family: "Times New Roman";
 }
 
@@ -22,3 +22,31 @@ nav {
     background-color: Green;
 }
 
+.content{
+    font-size: 14px;
+}
+
+.footer {
+    font-size: 10px;
+}
+
+.header {
+   font-size: 46px ;
+
+}
+
+.navigation {
+    font-size: 12px;
+}
+
+.sidebar {
+    font-size: 10px;
+}
+
+.header,.sidebar,.footer{
+    background-color: Magenta;
+}
+
+.navigation{
+    background-color: Blue;
+}
