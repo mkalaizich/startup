@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ex 1.VI</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Martin Kalaizich">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form>
+First name:<br><input type="text" name="firstname" required><br>
+Last name:<br><input type="text" name="lastname" required><br>
+email: <br><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
+Birthday: <input type="date" name="bday"><br>
+Favourite sport: <select name="cars">
+    <option value="Football">Football</option>
+    <option value="Basketball">Basketball</option>
+    <option value="Tennis">Tennis</option>
+    <option value="Baseball">Baseball</option>
+  </select><br>
+Bio:<br>
+<textarea name="bio" rows="10"  cols="30"></textarea> <br>
+<input type="submit" value="Submit"><br>
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
