@@ -50,3 +50,8 @@ nav {
 .navigation{
     background-color: Blue;
 }
+
+.oh-no-inline-styles{
+    background-color: Green !important; 
+}
+
