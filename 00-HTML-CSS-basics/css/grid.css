@@ -1,0 +1,64 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+span {
+    position: relative;
+    top: 4vh;
+    font-size: 20px;
+    visibility:hidden;
+    opacity: 0;
+}
+
+
+.showcase{
+    display: block;
+    float:left;
+    font-size: 12px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    padding-top: 0.5vw;
+    height: 25vh;
+    width : 30vw;
+    
+}
+
+.info{
+    box-sizing: border-box;
+    float:left;
+    font-size: 12px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    padding-top: 0.5vw;
+    height: 25vh;
+    width : 45vw;
+}
+.pic{
+    box-sizing: border-box;
+    float:left;
+    width: 30vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.pic img{
+    width:30vw;
+    height:30vh;
+}
+
+.pic:nth-of-type(odd) span{
+    color: Green;
+}
+
+.pic:nth-of-type(even) span{
+    color: Blue;
+}
+.pic:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pic:hover img{
+    opacity: 0.3;
+}
+
