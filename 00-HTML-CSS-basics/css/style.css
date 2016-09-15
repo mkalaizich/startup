@@ -1,57 +1,73 @@
 * {
-   
-   font-size: 14px  !important;
+   border-radius: 10px;
+   font-size: 14;
    font-family: "Times New Roman";
 }
 
-aside {
-    background-color: Green;
-}
-
-footer {
-    background-color: Red;
-    text-align: center;
-}
-
-header {
-    background-color: Blue;
-    text-align: center;
-}
-
-nav {
-    background-color: Green;
-}
-
-.content{
+.content {
+    display: inline-block;
     font-size: 14px;
+    text-align: center;
+    width:46%;
+    vertical-align: top;
+    height: 458px;
 }
 
 .footer {
-    font-size: 10px;
+    background-color: Magenta;
+    display: block;
+    font-size: 10px ;
+    margin: 0.5% 0.5% 1%;
+    border-radius: 10px;
+    text-align: center;
+    height: 20px;
 }
 
 .header {
-   font-size: 46px ;
-
+    background-color: Magenta;
+    display: block;
+    font-size: 46px ;
+    margin: 0.5% 0.5% 1%;
+    border-radius: 10px;
+    text-align: center;
+    width:99%;
 }
 
 .navigation {
+    background-color: Blue;
+    display: inline-block;
     font-size: 12px;
+    margin: 0% 1% 0% 0.5%;
+    vertical-align: top;
+    width:24.8%;
+    height:458px;
+    padding: 0.2%;
 }
 
 .sidebar {
-    font-size: 10px;
-}
-
-.header,.sidebar,.footer{
     background-color: Magenta;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0% 0.5% 0% 1%;
+    vertical-align: top;
+    width:24.8%;
+    padding: 0.2%;
+    height:458px;
 }
 
-.navigation{
-    background-color: Blue;
+.content .header {
+    margin-top: 1%;
+    width: auto;
+    height: 12%;
 }
 
-.oh-no-inline-styles{
-    background-color: Green !important; 
+.content .footer {
+    margin-top: 1%;
+    width: auto;
+    height: 8%;
 }
 
+.content article{
+    margin-top: 1%;
+    height: 76%;
+}
