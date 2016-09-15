@@ -20,6 +20,7 @@ aside {
     display: inline-block;
     width: 20%;
     background-color: #EEE8AA;
+    height: 100%;
 }
 section {
     display: inline-block;
@@ -29,4 +30,25 @@ section {
 footer {
     text-align: center;
     background-color: #EEE8AA;
+}
+.header {
+    font-size: 46px;
+}
+.footer {
+    font-size: 10px;
+}
+.content {
+    font-size: 14px;
+}
+.navigation {
+    font-size: 12px;
+}
+.sidebar {
+    font-size: 10px;
+}
+[class$="r"] {
+    background-color: magenta;
+}
+[class*="a"]:not([class$="r"]) {
+    background-color: blue;
 }
