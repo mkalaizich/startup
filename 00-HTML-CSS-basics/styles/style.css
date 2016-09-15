@@ -1,12 +1,32 @@
+* {
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 14px;
+}
 header {
     text-align: center;
+    width: 100%;
+    background-color: #EEE8AA;
 }
 nav {
+    display: inline-block;
     text-align: left;
     height: 100%;
-    width: 200px;
+    width: 20%;
     background-color: #fff;
-    position: fixed;
     z-index: 1;
-    margin-top: 40px;
+    background-color: #EEE8AA;
+}
+aside {
+    display: inline-block;
+    width: 20%;
+    background-color: #EEE8AA;
+}
+section {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    background-color: #EEE8AA;
 }
