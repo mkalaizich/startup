@@ -1,0 +1,12 @@
+header {
+    text-align: center;
+}
+nav {
+    text-align: left;
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    margin-top: 40px;
+}
