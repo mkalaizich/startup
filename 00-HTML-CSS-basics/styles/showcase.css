@@ -5,6 +5,7 @@
 .container:hover .description {
     visibility: visible;
     display: block;
+    opacity: 1;
 }
 
 .title {
@@ -15,15 +16,11 @@
     position: relative;
 }
 
-.description:hover {
-    visibility: visible;
-    opacity: 1;
-}
-
 .description {
-    font-size: 24px;
+    font-size: 28px;
     visibility: hidden;
     display: none;
+    position: absolute;        
 }
 
 .img:hover {
