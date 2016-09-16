@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        </script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -22,7 +23,7 @@
 
         <header class="section">Random Content</header>
         <p class="section">More randomness</p>
-        <header class="section hidden">Hello World!</header>
+        <header id="fade" class="section hidden">Hello World!</header>
         <div>
             <header>A tale of Two Cities</header>
             <p>It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
@@ -30,7 +31,25 @@
             Darkness,it was the spring of hope,it was the winter of despair,</p>
         </div>
 
-
+        <script>
+            document.onload=fadeIn();
+            function fadeIn(){
+                let sec =  document.getElementById("fade");
+                let opac = 0;
+                let int = setInterval(appear,100);
+                function appear(){
+                    if(opac==1){
+                        clearInterval(int);
+                    } 
+                    else {
+                        opac=opac+0.1;
+                        sec.style.opacity = opac;
+                        console.log(opac);
+                    }
+                }
+            }
+        </script>
+        
 
         <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
