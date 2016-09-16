@@ -16,13 +16,13 @@
     position: relative;
 }
 
+.img:hover {
+    opacity: 0.4;
+}
+
 .description {
     font-size: 28px;
     visibility: hidden;
     display: none;
     position: absolute;        
-}
-
-.img:hover {
-    opacity: 0.4;
 }
