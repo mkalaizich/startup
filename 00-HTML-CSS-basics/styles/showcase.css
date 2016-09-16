@@ -1,0 +1,31 @@
+.container {
+    box-sizing: border-box;
+}
+
+.container:hover .description {
+    visibility: visible;
+    display: block;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.img {
+    position: relative;
+}
+
+.description:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.description {
+    font-size: 24px;
+    visibility: hidden;
+    display: none;
+}
+
+.img:hover {
+    opacity: 0.4;
+}
