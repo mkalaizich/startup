@@ -16,8 +16,8 @@ function getJoke () {
 	request.open('GET', 'http://api.icndb.com/jokes/random', true);
 
 	request.onload = function() {
-	  if (this.status >= 200 && this.status < 400) {
-	    var data = JSON.parse(this.response);
+	  if (request.status >= 200 && request.status < 400) {
+	    var data = JSON.parse(request.response);
 	    var newP = document.createElement('p');
 	    newP.className = 'joke';
 	    document.getElementById('section_joke').appendChild(newP);
@@ -35,7 +35,33 @@ function getJoke () {
 	request.send();
 }
 
+function getData (method, url) {
+	return new Promise( function(resolve, reject){
+		var request = new XMLHttpRequest();
+		request.open(method, url);
+
+		request.onload = function() {
+			if (request.status >= 200 && request.status < 400) {
+				var data = JSON.parse(request.response);
+				resolve(console.log(data));
+			} else {
+				reject(Error(request.statusText));
+			}
+		};
+		request.onerror = function() {
+			reject(Error('Network Error'));
+		};
+
+		request.send();
+	});
+}
+
 document.addEventListener('DOMContentLoaded', function() { 
 	showHidden();
 	document.getElementById("btn_joke").addEventListener("click", getJoke);
+	getData('GET', 'http://api.icndb.com/jokes/random').then(function(response) {
+  		console.log("Success!");
+	}, function(error) {
+  		console.error("Failed!", error);
+	});
 });
