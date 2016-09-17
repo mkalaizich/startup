@@ -1,64 +1,64 @@
 .container {
-    width: 100vw;
     height: 100vh;
-}
-span {
-    position: relative;
-    top: 4vh;
-    font-size: 20px;
-    visibility:hidden;
-    opacity: 0;
-}
-
-
-.showcase{
-    display: block;
-    float:left;
-    font-size: 12px;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    padding-top: 0.5vw;
-    height: 25vh;
-    width : 30vw;
-    
+    width: 100vw;
 }
 
 .info{
     box-sizing: border-box;
-    float:left;
+    float: left;
     font-size: 12px;
-    margin-left: 2.5vw;
+    height: 25vh;
+    margin-left: 2vw;
     margin-right: 2.5vw;
     padding-top: 0.5vw;
-    height: 25vh;
     width : 45vw;
 }
+
 .pic{
     box-sizing: border-box;
     float:left;
-    width: 30vw;
     margin-left: 2vw;
     margin-top: 2vw;
+    width: 30vw;
 }
 
-.pic img{
-    width:30vw;
+.showcase{
+    box-sizing: border-box;
+    float:left;
+    font-size: 12px;
+    height: 25vh;
+    margin-left: 2vw;
+    margin-right: 2.5vw;
+    padding-top: 0.5vw;
+    width : 30vw;
+}
+
+.sp {
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    top: 4vh;
+}
+
+.pic .im{
     height:30vh;
+    width:30vw;
 }
 
-.pic:nth-of-type(odd) span{
-    color: Green;
-}
-
-.pic:nth-of-type(even) span{
-    color: Blue;
-}
-.pic:hover span {
-    visibility: visible;
+.pic:hover .sp {
     opacity: 1;
+    visibility: visible;
 }
 
-.pic:hover img{
+.pic:hover .im{
     opacity: 0.3;
 }
 
+.pic:nth-of-type(odd) .sp{
+    color: Green;
+}
+
+.pic:nth-of-type(even) .sp{
+    color: Blue;
+}
