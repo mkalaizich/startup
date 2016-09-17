@@ -1,16 +1,37 @@
+.butt{
+    display:block;
+    clear: both;
+    margin-left: 5px;
+}
+
 .section {
-    
     text-align: center;
-    
+}
+.he{
+    font-size: 16px;}
+
+.ph{ 
+    font-size: 12px;
 }
 
 .hidden{
     opacity: 0;
 }
-header{
-    font-size: 16px;
+
+.jokeplace{
+    display:none;
 }
 
-p {
-    font-size: 12px;
+.jokeshow{
+    box-sizing: border-box;
+    border-color: blue;
+    border-style: dashed;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    max-width: 500px;
+    padding: 3px;
+    text-align: justify;
 }

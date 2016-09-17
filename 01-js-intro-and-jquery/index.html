@@ -17,20 +17,18 @@
         </script>
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-        <header class="section">Random Content</header>
-        <p class="section">More randomness</p>
+        <header class="section he">Random Content</header>
+        <p class="section ph">More randomness</p>
         <header id="fade" class="section hidden">Hello World!</header>
-        <div>
-            <header>A tale of Two Cities</header>
-            <p>It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
+        <header>A tale of Two Cities</header>
+        <p>
+            It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
             s,it was the epoch of belief,it was the epoch of incredulity,it was the season of Light,it was the season of
-            Darkness,it was the spring of hope,it was the winter of despair,</p>
-        </div>
-
+            Darkness,it was the spring of hope,it was the winter of despair
+        </p>
+        <p class="jokeplace"></p>
+        <button type = "button" onclick="getJoke()" class="butt">Get a Joke</button>
+        
         <script>
             document.onload=fadeIn();
             function fadeIn(){
@@ -49,13 +47,27 @@
                 }
             }
         </script>
-        
+
+        <script>
+            function getJoke() {
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    obj = JSON.parse(this.responseText);
+                    document.querySelector(".jokeplace").classList.add("jokeshow");
+                    document.querySelector(".jokeplace").innerHTML =obj.value.joke;
+
+                }
+            };
+            xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
+            xhttp.send();
+            }
+        </script>
 
         <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
