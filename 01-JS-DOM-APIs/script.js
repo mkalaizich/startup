@@ -45,6 +45,7 @@ function getData (method, url) {
 				var data = JSON.parse(request.response);
 				resolve(console.log(data));
 			} else {
+				document.getElementById('section_joke').style.color = 'red';
 				reject(Error(request.statusText));
 			}
 		};
@@ -59,7 +60,7 @@ function getData (method, url) {
 document.addEventListener('DOMContentLoaded', function() { 
 	showHidden();
 	document.getElementById("btn_joke").addEventListener("click", getJoke);
-	getData('GET', 'http://api.icndb.com/jokes/random').then(function(response) {
+	getData('GET', 'https://api.github.com/search/repositories').then(function(response) {
   		console.log("Success!");
 	}, function(error) {
   		console.error("Failed!", error);
