@@ -1,0 +1,23 @@
+.title {
+	text-align: center;
+}
+
+.section {	
+  opacity: 0;  
+}
+
+.section_fadeIn{
+  opacity: 1;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: opacity .9s ease-in-out;
+  -moz-transition: opacity .9s ease-in-out;
+  -o-transition: opacity .9s ease-in-out;
+  transition: opacity .9s ease-in-out;
+}
+
+.button {
+  font-size: 20px;
+  text-align: center;
+}
