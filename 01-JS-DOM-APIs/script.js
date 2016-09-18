@@ -17,38 +17,48 @@ function getJoke () {
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
-	    var data = JSON.parse(request.response);
+	    var data = JSON.parse(request.response);	    
 	    var newP = document.createElement('p');
 	    newP.className = 'joke';
-	    document.getElementById('section_joke').appendChild(newP);
 	    newP.innerHTML = data.value.joke;
+	    document.getElementById('section_joke').appendChild(newP);	    
 	  } else {
-	    console.log('Server Error');
-
+	    console.log(Error(reques.statusText));
 	  }
 	};
 
 	request.onerror = function() {
-	  console.log('Connection error');
+	  console.log(Error(request.statusText));
 	};
 
 	request.send();
 }
 
-function getData (method, url) {
+function getHttp () {
 	return new Promise( function(resolve, reject){
-		var request = new XMLHttpRequest();
-		request.open(method, url);
+		var request = new XMLHttpRequest();	
+		var method =  document.getElementsByName('method')[0].value;
+		var url =  document.getElementsByName('url')[0].value;
+		var query = document.getElementsByName('query')[0].value;
+		var fullUrl = url+'?q='+query;
+		request.open(method, fullUrl);
 
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
-				var data = JSON.parse(request.response);
+				var data = [];
+				data = JSON.parse(request.response);
+				for (let i = 0; i < data.items.length; i++ ) {
+					var newP = document.createElement('p');					
+					newP.innerHTML = data.items[i].full_name;
+					document.getElementById('section_repositories').appendChild(newP);					
+				};
 				resolve(console.log(data));
 			} else {
 				document.getElementById('section_joke').style.color = 'red';
 				reject(Error(request.statusText));
 			}
 		};
+
 		request.onerror = function() {
 			reject(Error('Network Error'));
 		};
@@ -59,10 +69,8 @@ function getData (method, url) {
 
 document.addEventListener('DOMContentLoaded', function() { 
 	showHidden();
-	document.getElementById("btn_joke").addEventListener("click", getJoke);
-	getData('GET', 'https://api.github.com/search/repositories').then(function(response) {
-  		console.log("Success!");
-	}, function(error) {
-  		console.error("Failed!", error);
-	});
+	//Get Chuck Norris joke
+	document.getElementById('btn_joke').addEventListener('click', getJoke);
+	//Get Repositories from github
+	document.getElementById('btn_repository').addEventListener('click', getHttp);		
 });

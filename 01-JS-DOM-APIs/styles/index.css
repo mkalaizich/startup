@@ -1,12 +1,27 @@
+.button {
+  font-size: 20px;
+  text-align: center;
+}
+
 .title {
 	text-align: center;
+}
+
+.form {
+  display: block;
+}
+
+.half {
+  width: 45%;
+  display: inline-block;
+  position: relative;
 }
 
 .section {	
   opacity: 0;  
 }
 
-.section_fadeIn{
+.section_fadeIn {
   opacity: 1;
   font-size: 35px;
   font-weight: bold;
@@ -17,7 +32,3 @@
   transition: opacity .9s ease-in-out;
 }
 
-.button {
-  font-size: 20px;
-  text-align: center;
-}
