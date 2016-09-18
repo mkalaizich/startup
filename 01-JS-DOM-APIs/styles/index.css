@@ -7,11 +7,11 @@
 	text-align: center;
 }
 
-.table, .td {
-  border: 1px solid black;
-}
-
-.table {
+.table, .tr, .td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
   width: 30%;
 }
 
