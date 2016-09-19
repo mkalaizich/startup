@@ -3,10 +3,11 @@ function makePromise (url) {
 		let xhttp = new XMLHttpRequest();
 		xhttp.open("GET", url);
 		xhttp.onload = function() {
-			if (xhttp.status >= 200 && xhttp.status < 400) {
-				let obj = JSON.parse(xhttp.response);
+			if (this.readyState == 4 && this.status == 200) {
+				let obj = JSON.parse(xhttp.responseText);
 				resolve(console.log(obj));
 			} else {
+				document.querySelector(".section").style.backgroundColor="red";
 				reject(Error(xhttp.statusText));
 			}
 		};
