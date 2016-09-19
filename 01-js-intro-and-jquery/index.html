@@ -18,23 +18,29 @@
 
     </head>
     <body>
-        <section class="section">
-            <header class="he">Random Content</header>
-            <p class="ph">More randomness</p>
-            <header id="fade" class="hidden">Hello World!</header>
-        </section>
-        <header>A tale of Two Cities</header>
-        <p>
-            It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
-            s,it was the epoch of belief,it was the epoch of incredulity,it was the season of Light,it was the season of
-            Darkness,it was the spring of hope,it was the winter of despair
-        </p>
-        <section class="jokeplace"></section>
-        <button type = "button" onclick="getJoke()" class="butt">Get a Joke</button>
-        
+        <div class="div1">
+            <section class="section">
+                <header class="he">Random Content</header>
+                <p class="ph">More randomness</p>
+                <header id="fade" class="hidden">Hello World!</header>
+            </section>
+            <header>A tale of Two Cities</header>
+            <p>
+                It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
+                s,it was the epoch of belief,it was the epoch of incredulity,it was the season of Light,it was the season of
+                Darkness,it was the spring of hope,it was the winter of despair
+            </p>
+            <section class="jokeplace"></section>
+            <button type = "button" onclick="searchRep()" class="butt">Search Repositories</button>
+        </div>
+        <div class="div2">
+            <ul class="repolist">
+            
+            </ul>
+        </div>
         <script>
             document.onload=fadeIn();
-            makePromise('http://api.icndb.com/jokes/random');
+            makePromise('https://api.github.com/search/repositories?q=JavaScript');
         </script>
     </body>
 </html>

@@ -4,7 +4,24 @@
     margin-left: 5px;
 }
 
-.section {
+.div1{
+    display: inline-block; 
+}
+
+.div2{
+    box-sizing: border-box;
+    display: inline-block;
+    float:right;
+    max-width: 35vw;
+}
+
+.divnew{
+    max-width: 65vw;   
+}
+
+.repolist{}
+
+.section .he,.ph,.hidden{
     text-align: center;
 }
 .he{

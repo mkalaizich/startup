@@ -13,15 +13,19 @@ function fadeIn(){
     }
 }
 
-function getJoke() {
+function searchRep() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            obj = JSON.parse(this.responseText);
-            document.querySelector(".jokeplace").classList.add("jokeshow");
-            document.querySelector(".jokeplace").innerHTML =obj.value.joke;
+            let obj = JSON.parse(this.responseText);
+            for(let i=0; i < obj.items.length && i<50; i++){
+                let newItem = document.createElement('li')
+                newItem.innerHTML = obj.items[i].full_name;
+                document.querySelector(".repolist").appendChild(newItem);
             }
-        };
-    xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
+            document.querySelector(".div1").classList.add("divnew");
+        }
+    };
+    xhttp.open("GET", "https://api.github.com/search/repositories?q=JavaScript", true);
     xhttp.send();
 }
