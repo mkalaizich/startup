@@ -13,8 +13,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        </script>
+        <script src="scripts/script1.js"></script>
+        <script src="scripts/promise.js"></script> 
+
     </head>
     <body>
         <header class="section he">Random Content</header>
@@ -26,53 +27,13 @@
             s,it was the epoch of belief,it was the epoch of incredulity,it was the season of Light,it was the season of
             Darkness,it was the spring of hope,it was the winter of despair
         </p>
-        <p class="jokeplace"></p>
+        <section class="jokeplace"></section>
         <button type = "button" onclick="getJoke()" class="butt">Get a Joke</button>
         
         <script>
             document.onload=fadeIn();
-            function fadeIn(){
-                let sec =  document.getElementById("fade");
-                let opac = 0;
-                let int = setInterval(appear,100);
-                function appear(){
-                    if(opac==1){
-                        clearInterval(int);
-                    } 
-                    else {
-                        opac=opac+0.1;
-                        sec.style.opacity = opac;
-                        console.log(opac);
-                    }
-                }
-            }
+            makePromise('http://api.icndb.com/jokes/random');
         </script>
-
-        <script>
-            function getJoke() {
-                let xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    obj = JSON.parse(this.responseText);
-                    document.querySelector(".jokeplace").classList.add("jokeshow");
-                    document.querySelector(".jokeplace").innerHTML =obj.value.joke;
-
-                }
-            };
-            xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
-            xhttp.send();
-            }
-        </script>
-
-        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        
     </body>
 </html>
