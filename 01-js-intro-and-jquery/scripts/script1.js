@@ -19,7 +19,8 @@ function getJoke() {
         if (this.readyState == 4 && this.status == 200) {
             obj = JSON.parse(this.responseText);
             document.querySelector(".jokeplace").classList.add("jokeshow");
-            document.querySelector(".jokeplace").innerHTML =obj.value.joke;
+            let t=document.createTextNode(obj.value.joke);
+            document.querySelector(".jokeplace").appendChild(t)
             }
         };
     xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
@@ -34,8 +35,9 @@ function searchRep() {
             for(let i=0; i < obj.items.length && i<50; i++){
                 let newItem = document.createElement('li');
                 let newLink = document.createElement('a');
-                newLink.innerHTML = obj.items[i].full_name;
+                let t = document.createTextNode(obj.items[i].full_name);
                 newLink.href= obj.items[i].html_url;
+                newLink.appendChild(t);
                 newItem.appendChild(newLink);
                 document.querySelector(".repolist").appendChild(newItem);
             }
