@@ -1,25 +1,38 @@
 .butt{
     display:block;
     clear: both;
-    margin-left: 5px;
+    margin-bottom: 2px;
 }
 
 .div1{
     display: inline-block; 
+    margin-left: 5px;
 }
 
 .div2{
     box-sizing: border-box;
     display: inline-block;
     float:right;
-    max-width: 35vw;
+    max-width: 30vw;
 }
 
 .divnew{
-    max-width: 65vw;   
+    max-width: 70vw;   
 }
 
-.repolist{}
+.lab{
+    float:left;
+    margin-bottom: 2px;
+}
+
+.inp{
+    clear: both;
+    float:left;
+    margin-bottom: 2px;
+}
+
+.repolist{
+}
 
 .section .he,.ph,.hidden{
     text-align: center;
@@ -46,8 +59,7 @@
     display: inline-block;
     float: left;
     font-size: 14px;
-    margin-left: 5px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     max-width: 500px;
     padding: 3px;
     text-align: justify;

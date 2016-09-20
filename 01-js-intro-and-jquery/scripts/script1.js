@@ -13,19 +13,37 @@ function fadeIn(){
     }
 }
 
+function getJoke() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            obj = JSON.parse(this.responseText);
+            document.querySelector(".jokeplace").classList.add("jokeshow");
+            document.querySelector(".jokeplace").innerHTML =obj.value.joke;
+            }
+        };
+    xhttp.open("GET", "http://api.icndb.com/jokes/random", true);
+    xhttp.send();
+}
+
 function searchRep() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let obj = JSON.parse(this.responseText);
             for(let i=0; i < obj.items.length && i<50; i++){
-                let newItem = document.createElement('li')
-                newItem.innerHTML = obj.items[i].full_name;
+                let newItem = document.createElement('li');
+                let newLink = document.createElement('a');
+                newLink.innerHTML = obj.items[i].full_name;
+                newLink.href= obj.items[i].html_url;
+                newItem.appendChild(newLink);
                 document.querySelector(".repolist").appendChild(newItem);
             }
             document.querySelector(".div1").classList.add("divnew");
         }
     };
-    xhttp.open("GET", "https://api.github.com/search/repositories?q=JavaScript", true);
+    let repo = document.getElementById("reposit").value;
+    let url = "https://api.github.com/search/repositories?q=" + repo;
+    xhttp.open("GET", url, true);
     xhttp.send();
 }
