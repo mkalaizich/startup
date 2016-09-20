@@ -3,7 +3,7 @@
     width: 100vw;
 }
 
-.info{
+.info {
     box-sizing: border-box;
     float: left;
     font-size: 12px;
@@ -14,7 +14,7 @@
     width : 45vw;
 }
 
-.pic{
+.frame {
     box-sizing: border-box;
     float:left;
     margin-left: 2vw;
@@ -22,10 +22,11 @@
     width: 30vw;
 }
 
-.showcase{
+.showcase {
     box-sizing: border-box;
     float:left;
     font-size: 12px;
+    font-weight: bold;
     height: 25vh;
     margin-left: 2vw;
     margin-right: 2.5vw;
@@ -33,7 +34,7 @@
     width : 30vw;
 }
 
-.sp {
+.frame__span {
     font-size: 20px;
     visibility: hidden;
     opacity: 0;
@@ -41,24 +42,24 @@
     top: 4vh;
 }
 
-.pic .im{
+.frame .frame__image {
     height:30vh;
     width:30vw;
 }
 
-.pic:hover .sp {
+.frame:hover .frame__span {
     opacity: 1;
     visibility: visible;
 }
 
-.pic:hover .im{
+.frame:hover .frame__image {
     opacity: 0.3;
 }
 
-.pic:nth-of-type(odd) .sp{
+.frame:nth-of-type(odd) .frame__span {
     color: Green;
 }
 
-.pic:nth-of-type(even) .sp{
+.frame:nth-of-type(even) .frame__span{
     color: Blue;
 }
