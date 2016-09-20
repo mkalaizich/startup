@@ -1,0 +1,30 @@
+.butt{
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.caption, .table, .td, .th, .tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.caption, .td, .th{
+    padding: 5px;
+    text-align: center;
+}
+
+.td:first-child{
+    text-align: left;
+}
+
+.header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.section{
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
