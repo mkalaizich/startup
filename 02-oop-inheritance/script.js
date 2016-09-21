@@ -1,3 +1,12 @@
+var Social = {
+    share : function(friendName) {
+
+    },
+    like : function(friendName) {
+
+    }
+};
+
 class EventEmitter {
     constructor() {
         this.events = { } ;
