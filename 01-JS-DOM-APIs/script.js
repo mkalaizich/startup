@@ -41,6 +41,7 @@ function getHttp () {
 		var url =  document.getElementsByName('url')[0].value;
 		var query = document.getElementsByName('query')[0].value;
 		var fullUrl = url+'?q='+query;
+		
 		request.open(method, fullUrl);
 
 		request.onload = function() {
