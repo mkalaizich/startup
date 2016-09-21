@@ -1,8 +1,3 @@
-/*
-var pause = new CustomEvent();
-var resume = new CustomEvent();*/
-
-
 class EventEmitter {
     constructor() {
         this.events = { } ;
