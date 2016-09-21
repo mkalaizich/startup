@@ -1,0 +1,54 @@
+* {
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    background-color: #EEE8AA;
+    font-size: 46px;
+}
+
+.footer {
+    background-color: #EEE8AA;
+    font-size: 10px;
+    text-align: center;    
+}
+
+.form {
+    display: block;
+}
+
+.content {
+    font-size: 14px;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.navigation {
+    background-color: #EEE8AA;
+    font-size: 12px;
+    display: inline-block;
+    text-align: left;
+    height: 100%;
+    width: 20%;
+    z-index: 1;    
+}
+
+.sidebar {
+    background-color: #EEE8AA;
+    display: inline-block;
+    font-size: 10px;
+    height: 100%;
+    width: 20%;    
+}
+
+[class$="r"] {
+    background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+    background-color: blue;
+}

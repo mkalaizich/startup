@@ -1,0 +1,38 @@
+.container {
+    box-sizing: border-box;
+    display: block;
+}
+
+.container:hover .description {
+    display: block;
+    visibility: visible;
+}
+
+.desc {
+    display: block;
+    text-align: center;
+}
+
+.description:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.description {
+    display: none;
+    font-size: 24px;
+    visibility: hidden;    
+}
+
+.title {
+    display: none;
+}
+
+.img {
+    margin: 0 auto;
+    position: relative;    
+}
+
+.img:hover {
+    opacity: 0.4;
+}

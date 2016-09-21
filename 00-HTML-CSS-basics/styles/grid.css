@@ -1,0 +1,24 @@
+.full {
+    display: inline-block;
+    width: 100%; 
+}
+
+.three_fours {
+    display: inline-block;
+    width: 74.6%; 
+}
+
+.half {
+    display: inline-block;
+    width: 49.2%; 
+}
+
+.third {
+    display: inline-block;
+    width: 31.5%;
+}
+
+.quarter {
+    display: inline-block;
+    width: 23.8%; 
+}

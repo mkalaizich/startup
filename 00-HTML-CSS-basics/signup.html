@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Globant Bootcamp">
+        <meta name="keywords" content="Bootcamp,practise">
+        <meta name="author" content="Nicolas Del Fiorentino">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link href="styles/normalize.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+
+        <title>Sign up</title>
+    </head>
+    <body>
+        <div>
+            <form>                            
+                First name: 
+                <input class="form" type="text" name="firstname" required >
+                Last name: 
+                <input class="form" type="text" name="lastname" required>
+                Email: 
+                <input class="form" type="email" name="email" required>
+                Birthday: (YYYY-MM-DD) 
+                <input class="form" type="date" name="birthday" required>
+                Favourite Sport: 
+                <select class="form">
+                    <option value="football">Football</option>
+                    <option value="rugby">Rugby</option>
+                    <option value="voleyball">Voleyball</option>
+                </select>
+                Tell us about you: 
+                <textarea class="form" name="bio" cols="30"></textarea> 
+                
+                <button type="submit">Submit</button>
+                <button type="button">Clear</button>                 
+            </form>        
+        </div>
+    </body>
+</html>
