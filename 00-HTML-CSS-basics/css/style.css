@@ -13,7 +13,12 @@
     width:46%;
 }
 
-.footer {
+.content .content--article {
+    height: 76%;
+    margin-top: 1%;
+}
+
+.content--footer, .footer {
     background-color: Magenta;
     display: block;
     font-size: 10px;
@@ -22,13 +27,25 @@
     text-align: center;
 }
 
-.header {
+.content--header, .header {
     background-color: Magenta;
     display: block;
     font-size: 46px ;
     margin: 0.5% 0.5% 1%;
     text-align: center;
     width:99%;
+}
+
+.content .content--header {
+    height: 12%;
+    margin-top: 1%;
+    width: auto;
+}
+
+.content .content--footer {
+    height: 8%;
+    margin-top: 1%;
+    width: auto;
 }
 
 .navigation {
@@ -42,6 +59,10 @@
     width:24.8%;
 }
 
+.navigation--link {
+    color: Black;
+}
+
 .sidebar {
     background-color: Magenta;
     display: inline-block;
@@ -51,21 +72,4 @@
     padding: 0.2%;
     vertical-align: top;
     width:24.8%;
-}
-
-.content .header {
-    height: 12%;
-    margin-top: 1%;
-    width: auto;
-}
-
-.content .footer {
-    height: 8%;
-    margin-top: 1%;
-    width: auto;
-}
-
-.content .art {
-    height: 76%;
-    margin-top: 1%;
 }

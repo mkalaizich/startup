@@ -34,7 +34,7 @@
     width : 30vw;
 }
 
-.frame__span {
+.frame--span {
     font-size: 20px;
     visibility: hidden;
     opacity: 0;
@@ -42,24 +42,24 @@
     top: 4vh;
 }
 
-.frame .frame__image {
+.frame .frame--image {
     height:30vh;
     width:30vw;
 }
 
-.frame:hover .frame__span {
+.frame:hover .frame--span {
     opacity: 1;
     visibility: visible;
 }
 
-.frame:hover .frame__image {
+.frame:hover .frame--image {
     opacity: 0.3;
 }
 
-.frame:nth-of-type(odd) .frame__span {
+.frame:nth-of-type(odd) .frame--span {
     color: Green;
 }
 
-.frame:nth-of-type(even) .frame__span{
+.frame:nth-of-type(even) .frame--span{
     color: Blue;
 }
