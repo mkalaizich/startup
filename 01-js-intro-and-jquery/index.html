@@ -9,20 +9,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
+        
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="scripts/script1.js"></script>
         <script src="scripts/promise.js"></script> 
-
     </head>
     <body>
         <div class="div1">
             <section class="section">
-                <header class="he">Random Content</header>
-                <p class="ph">More randomness</p>
-                <header id="fade" class="hidden">Hello World!</header>
+                <header class="section--header">Random Content</header>
+                <p class="section--paragraph">More randomness</p>
+                <header class="section--header_hidden">Hello World!</header>
             </section>
             <header>A tale of Two Cities</header>
             <p>
@@ -33,13 +31,13 @@
             <section class="jokeplace"></section>
             <button onclick="getJoke()" class="butt">Get a Joke</button>
             <form>
-                <label class="lab">Please, tell me which repository are you looking for:</label>
-                <input type="text"  class="inp" id="reposit" required>
+                <label class="form--label">Please, tell me which repository are you looking for:</label>
+                <input type="text" class="form--input" required>
             </form>
             <button onclick="searchRep()" class="butt">Search Repositories</button>
         </div>
         <div class="div2">
-            <ul class="repolist"></ul>
+            <ul class="div2--repolist"></ul>
         </div>
         <script>
             document.onload=fadeIn();

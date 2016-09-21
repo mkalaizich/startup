@@ -6,7 +6,7 @@ function createTable () {
         ['EddardDuhalde', 15,35],
     ];
     let newTable = document.createElement('table');
-    newTable.className = 'table';
+    newTable.className = 'section--table';
     let newTr = document.createElement('tr');
     newTr.className = 'tr';     
     newTable.appendChild(newTr);
