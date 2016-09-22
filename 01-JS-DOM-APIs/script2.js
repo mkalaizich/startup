@@ -17,7 +17,7 @@ function createDom () {
 	newTr.className = 'tr';		
 	document.getElementById('table').appendChild(newTr);
 
-	for (let i = 0 ; i < structure[0].length; i++) {		
+	for (let i = 0 ; i < structure[0].length; i++) {
 		var newTh = document.createElement('th');
 
 		newTh.className = 'th';
@@ -36,7 +36,7 @@ function createDom () {
 
 			newTd.innerHTML = structure[i][j];
 			newTd.className = 'td';
-			document.getElementsByClassName('tr')[i].appendChild(newTd);			
+			document.getElementsByClassName('tr')[i].appendChild(newTd);
 		};
 	};
 }
