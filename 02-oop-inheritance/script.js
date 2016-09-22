@@ -18,7 +18,7 @@ class Actor {
 
 class EventEmitter {
     constructor () {
-        this.events = { };        
+        this.events = { };
     }
 
     on (event, callback) {
