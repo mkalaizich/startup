@@ -1,10 +1,11 @@
 function showHidden () {	
 	var sec = document.getElementById('hide');
+
     if (sec.style.display =='block')
     {
         sec.style.display=='none';
     } else {
-        var timer = setInterval(function(){
+        var timer = setInterval (function(){
             sec.style.display = 'block';
             sec.className = 'section_fadeIn';
         }, 1000)
@@ -13,18 +14,19 @@ function showHidden () {
 
 function getJoke () {
 	var request = new XMLHttpRequest();
+
 	request.open('GET', 'http://api.icndb.com/jokes/random', true);
 
 	request.onload = function() {
-	  if (request.status >= 200 && request.status < 400) {
-	    var data = JSON.parse(request.response);	    
-	    var newP = document.createElement('p');
-	    newP.className = 'joke';
-	    newP.innerHTML = data.value.joke;
-	    document.getElementById('section_joke').appendChild(newP);	    
-	  } else {
-	    console.log(Error(reques.statusText));
-	  }
+		if (request.status >= 200 && request.status < 400) {
+		    var data = JSON.parse(request.response);	    
+		    var newP = document.createElement('p');
+		    newP.className = 'joke';
+		    newP.innerHTML = data.value.joke;
+		    document.getElementById('section_joke').appendChild(newP);	    
+		} else {
+		    console.log(Error(reques.statusText));
+		}
 	};
 
 	request.onerror = function() {
@@ -71,7 +73,7 @@ function getHttp () {
 document.addEventListener('DOMContentLoaded', function() { 
 	showHidden();
 	//Get Chuck Norris joke
-	document.getElementById('btn_joke').addEventListener('click', getJoke);
+	document.getElementById('button_getJoke').addEventListener('click', getJoke);
 	//Get Repositories from github
-	document.getElementById('btn_repository').addEventListener('click', getHttp);		
+	document.getElementById('button_getRepository').addEventListener('click', getHttp);		
 });
