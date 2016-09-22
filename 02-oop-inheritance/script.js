@@ -9,6 +9,13 @@ let Social = {
     }
 };
 
+class Actor {
+    constructor (name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
 class EventEmitter {
     constructor () {
         this.events = { };        
@@ -36,8 +43,16 @@ class Movie extends EventEmitter {
         this.title = title;
         this.year = year;
         this.duration = duration;
+        this.actors = [];
     }
 
+    addCast (newActor) {
+        if (newActor instanceof Array) {
+            this.actors.push.apply(this.actors, newActor);
+        } else {
+            this.actors.push(newActor);
+        }
+    }
     play () {
         super.emit('play');
     }
@@ -58,8 +73,18 @@ class Logger {
 document.addEventListener('DOMContentLoaded', function() { 
     let lotr = new Movie('Lord of the rings', 2002, '228 min');
     let logger = new Logger();
+    let viggo = new Actor('Viggo Mortensen', 50);
+    let someCast = [
+        new Actor('Orlando Bloom',45),
+        new Actor('Ian McKellen',65),
+        new Actor('Elijha Wood',35)
+    ];
     lotr.on('play', logger.log);
-    lotr.play(); 
+    lotr.play();
+    lotr.addCast(viggo);    
+    console.log(lotr.actors);
+    lotr.addCast(someCast);
+    console.log(lotr.actors);
     lotr.share('Mike Blossom');
     lotr.like('Marco Aurelio');
 });
