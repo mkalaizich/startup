@@ -24,11 +24,13 @@ class EventEmitter {
     on (event, callback) {
         this.events[event] = callback;
     }
+
     emit (event) {
         if (this.events[event]) {
             this.events[event](event);
         }
     }
+
     off (event, callback) {
         if (this.events[event]) {
             delete this.events[event];
@@ -53,12 +55,15 @@ class Movie extends EventEmitter {
             this.actors.push(newActor);
         }
     }
+
     play () {
         super.emit('play');
     }
+
     pause () {
         super.emit('pause')
     }
+
     resume () {
         super.emit('resume');
     }
@@ -66,7 +71,7 @@ class Movie extends EventEmitter {
 
 class Logger {
     log (event) {
-        console.log('The '+event+' event has been emitted!');
+        console.log(`The ${event} event has been emitted!`);
     }
 }
 
@@ -79,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         new Actor('Ian McKellen',65),
         new Actor('Elijha Wood',35)
     ];
+    
     lotr.on('play', logger.log);
     lotr.play();
     lotr.addCast(viggo);    
