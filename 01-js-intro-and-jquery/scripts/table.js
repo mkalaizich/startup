@@ -15,7 +15,6 @@ function createTable () {
     for (let i = 0 ; i < matrix[0].length; i++) {        
         let newTh = document.createElement('th');
         let t = document.createTextNode(matrix[0][i]);
-        
         newTh.className = 'th';
         newTh.appendChild(t);
         newTr.appendChild(newTh);
@@ -23,14 +22,13 @@ function createTable () {
     
     for (let i = 1; i < matrix.length; i++) {
         let newTr =  document.createElement('tr');
-        
         newTr.className = 'tr';     
         newTable.appendChild(newTr);
         
         for (let j = 0; j < matrix[0].length; j++) {
+
             let newTd = document.createElement('td');
             let t = document.createTextNode(matrix[i][j]);
-            
             newTd.appendChild(t);
             newTd.className = 'td';
             newTr.appendChild(newTd);            

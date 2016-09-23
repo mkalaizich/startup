@@ -1,5 +1,5 @@
 function makePromise (url) {
-	return new Promise( function(resolve, reject){
+	return new Promise( function(resolve, reject) {
 		let xhttp = new XMLHttpRequest();
 
 		xhttp.open("GET", url);
@@ -9,8 +9,7 @@ function makePromise (url) {
 				let obj = JSON.parse(xhttp.responseText);
 				
 				resolve(console.log(obj));
-			} 
-			else {
+			} else {
 				document.querySelector(".section").style.backgroundColor="red";
 
 				reject(Error(xhttp.statusText));
