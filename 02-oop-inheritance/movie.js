@@ -40,6 +40,7 @@ class Movie extends EventEmitter {
 
     constructor (title,year,duration) {
         super ();
+        Object.assign(this, Social);
         this.title = title;
         this.year = year;
         this.duration = duration;
@@ -58,15 +59,28 @@ class Movie extends EventEmitter {
     }
 };
 
+let Social = {
+
+    like : function (friendName) {
+        console.log(`${friendName} likes ${this.title}`);
+    },
+
+    share : function (friendName) {
+        console.log(`Share ${this.title} with ${friendName}`);
+   }
+};
 let logger = new Logger ();
 let gladiator = new Movie("Gladiator",2000,155);
 let karatekid = new Movie("Karate Kid",1984,126);
 let lionking = new Movie("The Lion King",1994,88);
 
+//Some commands to try out the different methods
 gladiator.on('play', logger.log);
-gladiator.play ();
+gladiator.play();
 gladiator.on('rewind', logger.log);
 gladiator.on('pause', logger.log);
-gladiator.pause ();
+gladiator.pause();
 gladiator.off('play', logger.log);
 gladiator.off('resume', logger.log);
+karatekid.like('Javo Cremona'); 
+lionking.share('Chepo Garcia');
