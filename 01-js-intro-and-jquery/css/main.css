@@ -1,0 +1,68 @@
+.button {
+    display:block;
+    clear: both;
+    margin-bottom: 2px;
+}
+
+.div1 {
+    display: inline-block; 
+    margin-left: 5px;
+}
+
+.div2 {
+    box-sizing: border-box;
+    display: inline-block;
+    float:right;
+    max-width: 30vw;
+}
+
+.div1_newsize {
+    max-width: 65vw;   
+}
+
+.section--header {
+    font-size: 16px;
+}
+
+.section--header_hidden {
+    opacity: 0;
+}
+
+.form--input {
+    clear: both;
+    float:left;
+    margin-bottom: 2px;
+}
+
+.jokeplace {
+    display:none;
+}
+
+.jokeplace_show {
+    box-sizing: border-box;
+    border-color: blue;
+    border-style: dashed;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 2px;
+    max-width: 500px;
+    padding: 3px;
+    text-align: justify;
+}
+
+.form--label {
+    float:left;
+    margin-bottom: 2px;
+}
+
+.section--paragraph { 
+    font-size: 12px;
+}
+
+.div2--repolist {
+}
+
+.section--header,.section--paragraph,.section--header_hidden {
+    text-align: center;
+}

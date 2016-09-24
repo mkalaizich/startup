@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Index</title>
+        <meta name="author" content="Martin Kalaizich">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="scripts/script1.js"></script>
+        <script src="scripts/promise.js"></script> 
+    </head>
+    <body>
+        <div class="div1">
+            <section class="section">
+                <header class="section--header">Random Content</header>
+                <p class="section--paragraph">More randomness</p>
+                <header class="section--header_hidden">Hello World!</header>
+            </section>
+            <header>A tale of Two Cities</header>
+            <p>
+                It was the best of times,it was the worst of times,it was the age of wisdom,it was the age of foolishnes
+                s,it was the epoch of belief,it was the epoch of incredulity,it was the season of Light,it was the season of
+                Darkness,it was the spring of hope,it was the winter of despair.
+            </p>
+            <section class="jokeplace"></section>
+            <button onclick="getJoke()" class="button">Get a Joke</button>
+            <form>
+                <label class="form--label">Please, tell me which repository are you looking for:</label>
+                <input type="text" class="form--input" required>
+            </form>
+            <button onclick="searchRep()" class="button">Search Repositories</button>
+        </div>
+        <div class="div2">
+            <ul class="div2--repolist"></ul>
+        </div>
+        <script>
+            document.onload=fadeIn();
+            makePromise('https://api.github.com/search/repositories?q=JavaScript');
+        </script>
+    </body>
+</html>
