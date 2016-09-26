@@ -1,0 +1,19 @@
+* {
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    text-align: center;
+    width: 100%;    
+    font-size: 46px;
+}
+
+.footer {    
+    font-size: 10px;
+    text-align: center;    
+}
+
+.form {
+    display: block;
+}
