@@ -5,15 +5,15 @@
 
 .header {
     text-align: center;
-    width: 100%;    
     font-size: 46px;
-}
-
-.footer {    
-    font-size: 10px;
-    text-align: center;    
+    width: 100%;
 }
 
 .form {
     display: block;
+}
+
+.footer {    
+    font-size: 10px;
+    text-align: center;
 }
