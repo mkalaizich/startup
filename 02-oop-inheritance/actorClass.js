@@ -1,9 +1,16 @@
-class Actor {
+"use strict";
 
-    constructor (name,age) {
-        this.name = name
-        this.age = age;
-    }
-}
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-export default Actor;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Actor = function Actor(name, age) {
+    _classCallCheck(this, Actor);
+
+    this.name = name;
+    this.age = age;
+};
+
+exports.default = Actor;
