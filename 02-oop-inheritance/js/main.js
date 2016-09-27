@@ -1,7 +1,7 @@
-import Actor from 'js/Actor';
-import EventEmitter from 'js/EventEmitter';
-import Logger from 'js/Logger';
-import social from 'js/social';
+import Actor from 'Actor';
+import EventEmiter from 'EventEmiter';
+import Logger from 'Logger';
+import social from 'social';
 
 document.addEventListener('DOMContentLoaded', function() { 
     let lotr = new Movie('Lord of the rings', 2002, '228 min');

@@ -24,14 +24,14 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var EventEmitter = function () {
-    function EventEmitter() {
-        _classCallCheck(this, EventEmitter);
+var EventEmiter = function () {
+    function EventEmiter() {
+        _classCallCheck(this, EventEmiter);
 
         this.events = {};
     }
 
-    _createClass(EventEmitter, [{
+    _createClass(EventEmiter, [{
         key: "on",
         value: function on(event, callback) {
             this.events[event] = callback;
@@ -52,10 +52,10 @@ var EventEmitter = function () {
         }
     }]);
 
-    return EventEmitter;
+    return EventEmiter;
 }();
 
-exports.default = EventEmitter;
+exports.default = EventEmiter;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -64,11 +64,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _EventEmitter = require('js/EventEmitter');
+var _EventEmiter = require('EventEmiter');
 
-var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
+var _EventEmiter2 = _interopRequireDefault(_EventEmiter);
 
-var _Movie = require('js/Movie');
+var _Movie = require('Movie');
 
 var _Movie2 = _interopRequireDefault(_Movie);
 
@@ -102,15 +102,15 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _EventEmitter2 = require('js/EventEmitter');
+var _EventEmiter2 = require('EventEmiter');
 
-var _EventEmitter3 = _interopRequireDefault(_EventEmitter2);
+var _EventEmiter3 = _interopRequireDefault(_EventEmiter2);
 
-var _social = require('js/social');
+var _social = require('social');
 
 var _social2 = _interopRequireDefault(_social);
 
-var _Actor = require('js/Actor');
+var _Actor = require('Actor');
 
 var _Actor2 = _interopRequireDefault(_Actor);
 
@@ -122,8 +122,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Movie = function (_EventEmitter) {
-    _inherits(Movie, _EventEmitter);
+var Movie = function (_EventEmiter) {
+    _inherits(Movie, _EventEmiter);
 
     function Movie(title, year, duration) {
         _classCallCheck(this, Movie);
@@ -165,24 +165,24 @@ var Movie = function (_EventEmitter) {
     }]);
 
     return Movie;
-}(_EventEmitter3.default);
+}(_EventEmiter3.default);
 
 exports.default = Movie;
 'use strict';
 
-var _Actor = require('js/Actor');
+var _Actor = require('Actor');
 
 var _Actor2 = _interopRequireDefault(_Actor);
 
-var _EventEmitter = require('js/EventEmitter');
+var _EventEmiter = require('EventEmiter');
 
-var _EventEmitter2 = _interopRequireDefault(_EventEmitter);
+var _EventEmiter2 = _interopRequireDefault(_EventEmiter);
 
-var _Logger = require('js/Logger');
+var _Logger = require('Logger');
 
 var _Logger2 = _interopRequireDefault(_Logger);
 
-var _social = require('js/social');
+var _social = require('social');
 
 var _social2 = _interopRequireDefault(_social);
 
@@ -209,7 +209,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _Movie = require('js/Movie');
+var _Movie = require('Movie');
 
 var _Movie2 = _interopRequireDefault(_Movie);
 

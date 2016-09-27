@@ -1,8 +1,8 @@
-import EventEmitter from 'js/EventEmitter';
-import social from 'js/social';
-import Actor from 'js/Actor';
+import EventEmiter from 'EventEmiter';
+import social from 'social';
+import Actor from 'Actor';
 
-class Movie extends EventEmitter {
+class Movie extends EventEmiter {
     constructor (title, year, duration) {
         super();
         Object.assign(this, Social);

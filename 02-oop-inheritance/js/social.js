@@ -1,4 +1,4 @@
-import Movie from 'js/Movie';
+import Movie from 'Movie';
 
 let social = {
     share : function (friendName) {

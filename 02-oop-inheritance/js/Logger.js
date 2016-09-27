@@ -1,5 +1,5 @@
-import EventEmitter from 'js/EventEmitter';
-import Movie from 'js/Movie';
+import EventEmiter from 'EventEmiter';
+import Movie from 'Movie';
 
 class Logger {
     log (event) {

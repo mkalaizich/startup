@@ -1,4 +1,4 @@
-class EventEmitter {
+class EventEmiter {
     constructor () {
         this.events = { };
     }
@@ -20,4 +20,4 @@ class EventEmitter {
     }
 }
 
-export default EventEmitter;
+export default EventEmiter;
