@@ -3,6 +3,20 @@
     font-size: 14px;
 }
 
+.button {
+    display: block;
+    margin-left: auto;
+    margin-top: 1%;
+    margin-right: auto;
+    text-align: center;    
+}
+
+.drop {
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+}
+
 .header {
     text-align: center;
     font-size: 46px;
@@ -11,6 +25,9 @@
 
 .form {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
 }
 
 .footer {    

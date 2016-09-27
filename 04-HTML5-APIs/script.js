@@ -43,8 +43,33 @@ function eraseContent () {
     document.getElementById('target_p').innerHTML = '';
 }
 
+function getText (event) {
+    console.log(event);
+    event.stopPropagation();
+    event.preventDefault();
+    let files = event.dataTransfer.files;
+    let reader = new FileReader();
+
+    reader.readAsText(files[0], 'UTF-8');
+    console.log(reader);
+    console.log(reader.result);
+    console.log(reader.readyState);
+
+    reader.onloadend = function (event) {
+        document.getElementById('drop').value = reader.result;
+    }    
+}
+
+function handleDragOver (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('button_save').addEventListener('click', saveContent);
     document.getElementById('button_save').addEventListener('click', saveContentIndexedDB);
-    document.getElementById('button_clear').addEventListener('click', eraseContent);    
+    document.getElementById('button_clear').addEventListener('click', eraseContent);
+    document.getElementById('drop').addEventListener('dragover', handleDragOver);
+    document.getElementById('drop').addEventListener('drop', getText);
 });
