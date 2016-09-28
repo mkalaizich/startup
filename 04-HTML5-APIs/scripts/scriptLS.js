@@ -1,9 +1,14 @@
 document.addEventListener ('DOMContentLoaded', function() {
 
     document.querySelector('.div--savebutton').addEventListener('click', saveText);
+    document.querySelector('.div--clearbutton').addEventListener('click', clearText);
 });
 
-//Save the text using localStorage
+function clearText () {
+    localStorage.removeItem('Info');
+    console.log('Storage cleaned')
+}
+
 function saveText () {
 
     let savedText = document.querySelector('.div--textinput').value;

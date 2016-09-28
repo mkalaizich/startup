@@ -11,21 +11,33 @@ request.onsuccess = function (event) {
 request.onupgradeneeded = function (event) {
 
     database = event.target.result;
-    store = database.createObjectStore('datos', { keyPath : 'id'});
+    store = database.createObjectStore('info', { keyPath : 'id'});
 }
 
 document.addEventListener ('DOMContentLoaded', function() {
 
     document.querySelector('.div--savebutton').addEventListener('click', saveText);
+    document.querySelector('.div--clearbutton').addEventListener('click', clearText);
 
 });
 
+function clearText () {
+
+    let transaction = database.transaction('info','readwrite');
+    let store = transaction.objectStore('info');
+    let storerequest = store.delete(1);
+
+    transaction.oncomplete = function (event) {
+        console.log('Text successfuly deleted');
+    };
+}
+
 function saveText () {
     let data = document.querySelector('.div--textinput').value;
-    let transaction = database.transaction('datos','readwrite');
-    let store = transaction.objectStore('datos');
+    let transaction = database.transaction('info','readwrite');
+    let store = transaction.objectStore('info');
     let add = store.put({
-        datos: data,
+        info: data,
         id: 1
     });
     
