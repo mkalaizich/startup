@@ -14,13 +14,6 @@ request.onupgradeneeded = function (event) {
     store = database.createObjectStore('info', { keyPath : 'id'});
 }
 
-document.addEventListener ('DOMContentLoaded', function() {
-
-    document.querySelector('.div--savebutton').addEventListener('click', saveText);
-    document.querySelector('.div--clearbutton').addEventListener('click', clearText);
-
-});
-
 function clearText () {
 
     let transaction = database.transaction('info','readwrite');
@@ -33,6 +26,7 @@ function clearText () {
 }
 
 function saveText () {
+
     let data = document.querySelector('.div--textinput').value;
     let transaction = database.transaction('info','readwrite');
     let store = transaction.objectStore('info');
@@ -42,6 +36,7 @@ function saveText () {
     });
     
     transaction.oncomplete = function (event) {
+        
         document.querySelector('.div--textinput').value = '';
         console.log('Text successfuly saved');
     };
