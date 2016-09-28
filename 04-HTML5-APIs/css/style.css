@@ -1,0 +1,12 @@
+.div {
+    display: inline-block;
+    float: left;
+}
+
+.div--label, .div--savebutton, .div--textinput {
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    margin-left: 5px;
+    padding: 3px;
+}
