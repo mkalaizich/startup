@@ -24,7 +24,7 @@ function saveContentIndexedDB () {
         let store = transaction.objectStore('string');
         let textToSave = document.getElementById('text_area').value;
 
-        store.put({id: 1, info: textToSave});
+        store.add({id: 1, info: textToSave});
 
         transaction.oncomplete = function () {
             console.log("Transaction completed succesfully");
@@ -50,13 +50,15 @@ function getText (event) {
     let files = event.dataTransfer.files;
     let reader = new FileReader();
 
-    reader.readAsText(files[0], 'UTF-8');
-    console.log(reader);
-    console.log(reader.result);
-    console.log(reader.readyState);
+    reader.readAsText(files[0], 'UTF-8');    
 
     reader.onloadend = function (event) {
-        document.getElementById('drop').value = reader.result;
+        //document.getElementById('drop').value = reader.result;
+        let text = document.createTextNode(event.target.result);
+        let box = document.getElementById('drop');
+
+        box.removeChild(box.childNodes[0]);
+        box.appendChild(text);
     }    
 }
 

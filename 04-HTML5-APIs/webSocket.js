@@ -6,8 +6,6 @@ function openSocket () {
     webSocket.onerror = onError;
 
     console.log(webSocket);
-    webSocket.close();
-
 }
 
 function onOpen (event) {
@@ -29,5 +27,5 @@ function onError (event) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('button_openSocket').addEventListener('click', openSocket);
+    document.getElementById('button_openSocket').addEventListener('click', openSocket);    
 });
