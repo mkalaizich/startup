@@ -2,9 +2,12 @@ function saveContent () {
     if (typeof(Storage) !== "undefined") {
         let textToSave = document.getElementById('text_area').value;
         let target = document.getElementById('target_p');
-        localStorage.setItem('text', textToSave);
-        target.innerHTML = localStorage.getItem('text');
 
+        localStorage.setItem('text', textToSave);
+
+        let textToShow = document.createTextNode(localStorage.getItem('text'));
+
+        target.appendChild(textToShow);
     } else {
         alert('Browser not supported.');
     }
@@ -34,26 +37,26 @@ function saveContentIndexedDB () {
     };
 
     requestDB.onclose = function () {
-        console.log("database closed");
+        console.log("Database closed");
     };
 }
 
 function eraseContent () {
+    let box = document.getElementById('target_p');
+
     localStorage.removeItem('text');
-    document.getElementById('target_p').innerHTML = '';
+    box.removeChild(box.childNodes[0]);
 }
 
 function getText (event) {
-    console.log(event);
-    event.stopPropagation();
-    event.preventDefault();
     let files = event.dataTransfer.files;
     let reader = new FileReader();
-
+    
+    event.stopPropagation();
+    event.preventDefault();
     reader.readAsText(files[0], 'UTF-8');    
 
     reader.onloadend = function (event) {
-        //document.getElementById('drop').value = reader.result;
         let text = document.createTextNode(event.target.result);
         let box = document.getElementById('drop');
 

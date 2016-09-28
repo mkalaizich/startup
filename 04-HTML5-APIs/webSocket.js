@@ -4,8 +4,6 @@ function openSocket () {
     webSocket.onclose = onClose;
     webSocket.onmessage = onMessage;
     webSocket.onerror = onError;
-
-    console.log(webSocket);
 }
 
 function onOpen (event) {
