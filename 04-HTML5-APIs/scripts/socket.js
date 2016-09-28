@@ -8,11 +8,6 @@ document.addEventListener ('DOMContentLoaded', function () {
     document.querySelector('.closebutton').addEventListener('click', close);
 });
 
-function onOpen(evt) {
-
-    console.log("CONNECTED");
-}
-
 function close () {
 
     console.log("DISCONNECTED");
@@ -24,11 +19,16 @@ function onMessage(evt) {
     console.log('RESPONSE:' + evt.data);
 }
 
+function onOpen(evt) {
+
+    console.log("CONNECTED");
+}
+
 function send () {
 
     let message = document.querySelector(".messageinput").value;
     
     console.log("SENT:" + message);
     websocket.send(message);
-    document.querySelector(".messageinput").value= '';
+    document.querySelector(".messageinput").value = '';
 }
