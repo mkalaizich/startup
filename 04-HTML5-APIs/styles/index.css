@@ -6,8 +6,8 @@
 .button {
     display: block;
     margin-left: auto;
-    margin-top: 1%;
     margin-right: auto;
+    margin-top: 1%;
     text-align: center;    
 }
 
@@ -16,14 +16,14 @@
 }
 
 .drop {
-    text-align: center;
     font-size: 50px;
+    text-align: center;
     width: 100%;
 }
 
 .header {
-    text-align: center;
     font-size: 46px;
+    text-align: center;
     width: 100%;
 }
 
