@@ -1,0 +1,40 @@
+* {
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;    
+}
+
+.container {
+    text-align: center;
+}
+
+.drop {
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.header {
+    font-size: 46px;
+    text-align: center;
+    width: 100%;
+}
+
+.form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
+}
+
+.footer {    
+    font-size: 10px;
+    text-align: center;
+}
