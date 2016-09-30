@@ -1,0 +1,30 @@
+{
+  "name": "02-oop-inheritance",
+  "version": "1.0.0",
+  "description": "Globant javascript ",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "babel /js -d /lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasDF/startup.git"
+  },
+  "keywords": [
+    "bootcamp",
+    "javascript",
+    "clases",
+    "es6"
+  ],
+  "author": "Nicolas Del Fiorentino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasDF/startup/issues"
+  },
+  "homepage": "https://github.com/NicolasDF/startup#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
+  }
+}
