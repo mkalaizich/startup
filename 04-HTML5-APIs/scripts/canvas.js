@@ -13,8 +13,8 @@ document.addEventListener ('DOMContentLoaded', function () {
 
 function draw1 () {
 
-    let canvas = document.querySelector(".frame--canvas");
-    let ctx = canvas.getContext("2d");
+    let canvas = document.querySelector('.frame--canvas');
+    let ctx = canvas.getContext('2d');
     let x = randomInteger(0,100);
     let y = randomInteger(0,35);
     let base = randomInteger(40,200);
@@ -24,16 +24,16 @@ function draw1 () {
     
     switch(random) {
         case 0:
-            color = "blue";
+            color = 'blue';
         break;
         case 1:
-            color = "red";
+            color = 'red';
         break;
         case 2:
-            color = "green";
+            color = 'green';
         break;
         case 3:
-            color = "yellow";
+            color = 'yellow';
         break;
     }
 
@@ -50,8 +50,8 @@ function draw1 () {
 
 function draw2 () {
 
-    let canvas = document.querySelectorAll(".frame--canvas")[1];
-    let ctx = canvas.getContext("2d");
+    let canvas = document.querySelectorAll('.frame--canvas')[1];
+    let ctx = canvas.getContext('2d');
     let x = randomInteger(0,100);
     let y = randomInteger(0,35);
     let base = randomInteger(40,200);
@@ -62,29 +62,29 @@ function draw2 () {
     
     switch(random) {
         case 0:
-            color = "blue";
+            color = 'blue';
         break;
         case 1:
-            color = "red";
+            color = 'red';
         break;
         case 2:
-            color = "green";
+            color = 'green';
         break;
         case 3:
-            color = "yellow";
+            color = 'yellow';
         break;
     }
 
     grd.addColorStop(0,color);
-    grd.addColorStop(1,"white");
+    grd.addColorStop(1,'white');
     ctx.fillStyle = grd;
     ctx.fillRect(x, y, x + base, y + height); 
 }
 
 function draw3 () {
 
-    let canvas = document.querySelectorAll(".frame--canvas")[2];
-    let ctx = canvas.getContext("2d");
+    let canvas = document.querySelectorAll('.frame--canvas')[2];
+    let ctx = canvas.getContext('2d');
     let x = 150;
     let y = 75;
     let radius = randomInteger(35,70);
@@ -93,16 +93,16 @@ function draw3 () {
     
     switch(random) {
         case 0:
-            color = "blue";
+            color = 'blue';
         break;
         case 1:
-            color = "red";
+            color = 'red';
         break;
         case 2:
-            color = "green";
+            color = 'green';
         break;
         case 3:
-            color = "yellow";
+            color = 'yellow';
         break;
     }
 
@@ -115,8 +115,8 @@ function draw3 () {
 
 function animation () {
 
-    let mainCanvas = document.querySelectorAll(".frame--canvas")[3];
-    let mainContext = mainCanvas.getContext("2d");
+    let mainCanvas = document.querySelectorAll('.frame--canvas')[3];
+    let mainContext = mainCanvas.getContext('2d');
     let canvasWidth = mainCanvas.width;
     let canvasHeight = mainCanvas.height;
     let base = 40;
@@ -128,9 +128,9 @@ function animation () {
         let x1 = 2 + x;
 
         mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
-        mainContext.fillStyle = "white";
+        mainContext.fillStyle = 'white';
         mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
-        mainContext.fillStyle = "#006699";
+        mainContext.fillStyle = '#006699';
         mainContext.fillRect(x1, 0, base, height); 
         x += 5;
         if (x < canvasWidth - 40) {

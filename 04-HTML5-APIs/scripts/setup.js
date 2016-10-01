@@ -11,7 +11,7 @@ function dropHandler(ev) {
     let reader = new FileReader();
     
     ev.preventDefault();
-    reader.readAsText(dt[0],"UTF-8");
+    reader.readAsText(dt[0],'UTF-8');
     reader.onload = function(event) {            
         document.querySelector('.div--textinput').value = event.target.result;
     }       

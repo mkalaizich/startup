@@ -1,4 +1,4 @@
-let websocket = new WebSocket("ws://echo.websocket.org/");
+let websocket = new WebSocket('ws://echo.websocket.org/');
 
 document.addEventListener ('DOMContentLoaded', function () {
 
@@ -10,7 +10,7 @@ document.addEventListener ('DOMContentLoaded', function () {
 
 function close () {
 
-    console.log("DISCONNECTED");
+    console.log('DISCONNECTED');
     websocket.close()
 }
 
@@ -21,14 +21,14 @@ function onMessage(evt) {
 
 function onOpen(evt) {
 
-    console.log("CONNECTED");
+    console.log('CONNECTED');
 }
 
 function send () {
 
-    let message = document.querySelector(".messageinput").value;
+    let message = document.querySelector('.messageinput').value;
     
-    console.log("SENT:" + message);
+    console.log('SENT:' + message);
     websocket.send(message);
-    document.querySelector(".messageinput").value = '';
+    document.querySelector('.messageinput').value = '';
 }
