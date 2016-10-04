@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Save Text</title>
+        <meta name="author" content="Martin Kalaizich">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="scripts/setup.js"></script>
+        <!--Select Local Storage or IndexedDB by commenting/uncommenting the following lines-->
+
+        <!--Uncomment this line to use Local Storage-->
+        <!--<script src="scripts/scriptLS.js"></script>-->
+
+        <!--Uncomment this line to use IndexDB-->
+        <script src="scripts/scriptindexedDB.js"></script>
+    </head>
+    <body>
+        <div class="div">
+            <label class="div--label">Save your text:</label>
+            <textarea class="div--textinput" rows="10"  cols="30" id="drop_zone"></textarea><br>
+            <button class="div--savebutton">Save</button>
+            <button class="div--clearbutton">Clear</button>
+        <p class="p"></p>
+        </div>
+    </body>
+</html>
