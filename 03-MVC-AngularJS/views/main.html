@@ -1,0 +1,12 @@
+<div ng-controller="MovieController">
+    <ul>
+        <li ng-repeat="movie in movie.movies">
+            <p>Title: {{ movie.title }} </p>
+            <p>Year: {{ movie.year }} </p>
+            <div>                        
+                <p ng-show="toggle">Description: {{ movie.description }} </p>
+                <a href="" ng-click="toggle = !toggle"> View Description</a>
+            </div>
+        </li>
+    </ul>
+</div>
