@@ -1,11 +1,14 @@
-<div ng-controller="MovieController">
-    <ul>
-        <li ng-repeat="movie in movie.movies">
+<div class="col-md-6 panel panel-default">
+    <h1 class="title panel-heading">Movie List</h1>
+    <ul class="panel-body">
+        <li class="col-md-6 movie" ng-repeat="movie in moviesList">
             <p>Title: {{ movie.title }} </p>
             <p>Year: {{ movie.year }} </p>
             <div>                        
                 <p ng-show="toggle">Description: {{ movie.description }} </p>
-                <a href="" ng-click="toggle = !toggle"> View Description</a>
+                <a href="" ng-click="toggle = !toggle"> View Description</a> |
+                <a href="" ng-click="deleteMovie(movie.id)">Delete</a> |
+                <a href="" ng-click="editMovie(movie.id)">Edit</a>
             </div>
         </li>
     </ul>
