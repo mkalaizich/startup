@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Angular Exercise</title>
+        <meta name="author" content="Martin Kalaizich">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div ng-app="aplic" ng-controller="moviesCtrl">
+            <table class="table">
+                <tr>
+                    <th class="table--th">Title</th>
+                    <th class="table--th">Year</th>
+                    <th class="table--th">Plot</th>
+                </tr>
+                    <tr ng-repeat="x in movies">
+                    <td class="table--td">{{ x.title }}</td>
+                    <td class="table--td">{{ x.year }}</td>
+                    <td class="table--plot">{{ x.plot }}</td>
+                </tr> 
+            </table>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.table, .table--th, .table--td, .table--plot {
+    
+    border: 1px solid black;
+}
+
+.table {
+
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 70vw;
+}
+
+.table--plot {
+
+    text-align: justify;
+}
+
+.table--td {
+
+    text-align: center;
+}
+
+.table--th {
+
+    font-weight: bold;
+    text-align: center;
+}
+
