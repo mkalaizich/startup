@@ -1,3 +1,40 @@
+.add, .editions {
+
+    margin-bottom: 3px;
+}
+
+.changes, .details, .list {
+
+    clear: both;
+    display: inline-block;
+    float: left;
+    margin-left: 3px;
+    width: 70vw;
+}
+
+.editions--button, .editions--input  .editions--select {
+
+    margin-left: 3px;
+}
+
+.list--header {
+
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.list--element {
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list--toggler {
+
+    color: blue;
+}
+
 .table, .table--th, .table--td, .table--plot {
     
     border: 1px solid black;
@@ -25,4 +62,3 @@
     font-weight: bold;
     text-align: center;
 }
-

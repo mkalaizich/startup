@@ -7,17 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
-
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
-        <div ng-app="aplic" ng-controller="moviesCtrl">
+    <body ng-app="app" ng-controller="moviesCtrl">
+        <div class="list">
+            <header class="list--header"> My Movie List</header>
+            <ul>
+                <li class="list--element" ng-repeat="x in movies">
+                    <td>{{ x.title }}</td>
+                </li>
+            </ul>
+            <a class="list--toggler" ng-click="toggle = !toggle">Show/Hide Details</a>
+        </div> 
+        <div class="details" ng-show="toggle">
+            <hr>
             <table class="table">
-                <tr>
-                    <th class="table--th">Title</th>
-                    <th class="table--th">Year</th>
-                    <th class="table--th">Plot</th>
+                <tr class="table--tr">
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Plot</th>
                 </tr>
                     <tr ng-repeat="x in movies">
                     <td class="table--td">{{ x.title }}</td>
@@ -25,5 +34,23 @@
                     <td class="table--plot">{{ x.plot }}</td>
                 </tr> 
             </table>
+        </div>
+
+        <div class="changes" ng-controller="changesCtrl">
+            <hr>
+            <div class="add">
+                <input type="text" ng-model="title" placeholder="Enter a Movie"/>
+                <input type="text" ng-model="year" placeholder="Enter it's year" />
+                <button ng-click="add()">Add the Movie</button>
+            </div>
+            <div class="editions">
+                <select class="editions--select" ng-model="toremove">
+                    <option ng-repeat="x in movies">{{ x.title }}</option>
+                </select>
+                <button class="editions--button" ng-click="remove()">Delete the Movie</button>
+                <input class="editions--input"  type="text" ng-model="editplot" ng-show="toremove">
+                <button class="editions--button" ng-click="editmovie()" ng-show="toremove">Edit Plot</button><br>
+            </div>
+        </div>
     </body>
 </html>
