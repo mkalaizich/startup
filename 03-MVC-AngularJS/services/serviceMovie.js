@@ -21,7 +21,7 @@ movies.service('serviceMovie', [ function () {
             'description': 'A team of explorers travel through a wormhole in space in an attempt to ensure humanitys survival.'
         }];
 
-        localStorage.setItem('movies', JSON.stringify(movies));
+        localStorage.setItem('movies', JSON.stringify(moviesList));
     }
 
     this.addMovie = function (Movie) {

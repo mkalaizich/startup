@@ -13,3 +13,22 @@
         </li>
     </ul>
 </div>
+<div>            
+    <form class="col-md-6">
+        <h1 class="title">Add Movie</h1>
+        <div class="form-group col-md-6">
+            <label for="movieTitle"></label>
+            <input type="text" required class="form-control" id="movieTitle" placeholder="Movie Title" ng-model="newmovie.title">
+        </div>
+        <div class="form-group col-md-6" >
+            <label for="movieYear"></label>
+            <input type="number" required class="form-control" id="movieYear" placeholder="Movie Year" ng-model="newmovie.year">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="movieDescription"></label>
+            <textarea class="form-control" required id="movieDescription" rows="3" ng-model="newmovie.description" placeholder="Movie Description"></textarea>
+        </div>
+        <input type="hidden" ng-model="newmovie.id" />
+        <button type="button" class="btn btn-primary" ng-click="addMovie()">Add Movie</button>
+    </form>
+</div>
