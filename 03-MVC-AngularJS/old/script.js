@@ -32,7 +32,7 @@ app.controller('moviesCtrl', function($scope, $http, services) {
 
     let newMovie;
     let myFavMovies = ['Gladiator', 'The Lion King', 'The Terminator'];
-    let ctrl = this;
+    
     $scope.movies = [];
     
     if (localStorage.length == 0) {
