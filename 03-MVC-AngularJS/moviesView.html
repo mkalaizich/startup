@@ -8,7 +8,19 @@
     <a class="list--toggler" ng-click="toggle = !toggle">Show/Hide Details</a>
 </div> 
 <div class="details" ng-show="toggle">
-    <movies-details></movies-details>
+    <hr>
+    <table class="table">
+        <tr class="table--tr">
+            <th>Title</th>
+            <th>Year</th>
+            <th>Plot</th>
+        </tr>
+        <tr ng-repeat="x in movies">
+            <td class="table--td">{{ x.title }}</td> 
+            <td class="table--td">{{ x.year }}</td>
+            <td class="table--plot">{{ x.plot }}</td>
+        </tr> 
+    </table>
 </div>
 <div class="changes" ng-controller="changesCtrl">
     <hr>
