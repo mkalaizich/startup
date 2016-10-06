@@ -28,11 +28,11 @@ app.service('services', function(){
     }
 });
 
-app.controller('moviesCtrl', function($scope, $http, services) {
+app.controller('moviesController', function($scope, $http, services) {
 
     let newMovie;
     let myFavMovies = ['Gladiator', 'The Lion King', 'The Terminator'];
-    let ctrl = this;
+    let Controller = this;
     $scope.movies = [];
     
     if (localStorage.length == 0) {
@@ -57,7 +57,7 @@ app.controller('moviesCtrl', function($scope, $http, services) {
     }
 });
 
-app.controller('changesCtrl', function($scope, $http, services) {
+app.controller('changesController', function($scope, $http, services) {
   
     $scope.add = function () {
 

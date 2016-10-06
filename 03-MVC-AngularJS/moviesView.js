@@ -1,4 +1,4 @@
 app.component('moviesView', {
-  templateUrl: 'moviesView.html',
-  controller: 'moviesCtrl'
+    templateUrl: 'moviesView.html',
+    controller: 'moviesController'
 });
