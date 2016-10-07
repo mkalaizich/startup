@@ -32,7 +32,6 @@ app.controller('moviesController', function($scope, $http, services) {
 
     let newMovie;
     let myFavMovies = ['Gladiator', 'The Lion King', 'The Terminator'];
-    let Controller = this;
     $scope.movies = [];
     
     if (localStorage.length == 0) {
